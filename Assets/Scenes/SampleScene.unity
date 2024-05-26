@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 227082568}
   - component: {fileID: 227082567}
   - component: {fileID: 227082566}
+  - component: {fileID: 227082569}
   m_Layer: 5
   m_Name: Star Image
   m_TagString: Untagged
@@ -265,6 +266,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227082564}
   m_CullTransparentMesh: 0
+--- !u!114 &227082569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227082564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c9344110ee3a8c4ca0c30929aad0c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _drivenBy: {fileID: 0}
+  _from: 0
+  _to: 1
+  _animCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  EditorPreview:
+    preview: 1
+    previewResult: 0
+    IHaveInitialValue: 1
+    InitialFloat: 0
+    InitialVector3: {x: 262.09082, y: 335.51016, z: 0}
+    initialString: (262.09, 335.51, 0.00)
+  _animType: 0
+  _myTransform: {fileID: 227082565}
+  _inAxis: {x: 1, y: 1, z: 1}
 --- !u!1 &242615932
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,6 +762,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  EditorPreview:
+    preview: 0
+    previewResult: 0
+    IHaveInitialValue: 0
+    InitialFloat: 0
+    InitialVector3: {x: 0, y: 0, z: 0}
+    initialString: 
   _animType: 3
   _myTransform: {fileID: 242615933}
   _inAxis: {x: 1, y: 0, z: 0}
@@ -758,7 +815,7 @@ Transform:
   m_GameObject: {fileID: 806190756}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.468658, y: 477.95877, z: -12.126923}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -825,7 +882,7 @@ Transform:
   m_GameObject: {fileID: 887302093}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.468658, y: 477.95877, z: -12.126923}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -870,6 +927,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  EditorPreview:
+    preview: 0
+    previewResult: 0
+    IHaveInitialValue: 0
+    InitialFloat: 0
+    InitialVector3: {x: 0, y: 0, z: 0}
+    initialString: 
   _animType: 3
   _myTransform: {fileID: 959189336}
   _inAxis: {x: 1, y: 0, z: 0}
@@ -1175,7 +1239,14 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _animType: 0
+  EditorPreview:
+    preview: 0
+    previewResult: 0
+    IHaveInitialValue: 0
+    InitialFloat: 0
+    InitialVector3: {x: 0, y: 0, z: 0}
+    initialString: 
+  _animType: 1
   _myImage: {fileID: 8310424228741116928}
 --- !u!1 &1800902046
 GameObject:
@@ -1401,6 +1472,7 @@ GameObject:
   - component: {fileID: 2073247573}
   - component: {fileID: 2073247572}
   - component: {fileID: 2073247571}
+  - component: {fileID: 2073247574}
   m_Layer: 5
   m_Name: Star Image
   m_TagString: Untagged
@@ -1479,6 +1551,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073247569}
   m_CullTransparentMesh: 0
+--- !u!114 &2073247574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073247569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c9344110ee3a8c4ca0c30929aad0c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _drivenBy: {fileID: 1755420559}
+  _from: 0
+  _to: 1
+  _animCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  EditorPreview:
+    preview: 1
+    previewResult: 0
+    IHaveInitialValue: 1
+    InitialFloat: 0
+    InitialVector3: {x: -27.468658, y: 477.95877, z: -12.126923}
+    initialString: (-27.47, 477.96, -12.13)
+  _animType: 0
+  _myTransform: {fileID: 806190759}
+  _inAxis: {x: 1, y: 1, z: 1}
 --- !u!114 &201462865603974212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1995,7 +2116,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 0.54
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0

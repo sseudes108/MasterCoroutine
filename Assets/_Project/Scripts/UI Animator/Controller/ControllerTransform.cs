@@ -53,4 +53,13 @@ public class ControllerTransform : Controller{
         Vector3 resultVector = GetValuesInAxis(curveResult);
         SetTransform(resultVector);
     }
+
+    public override void GetInitialValue(ControllerEditorPreview controller){
+        EditorPreview.InitialVector3 = GetTransform();
+        EditorPreview.initialString = EditorPreview.InitialVector3.ToString();
+    }
+
+    public override void SetInitialValue(ControllerEditorPreview controller){
+        SetTransform(EditorPreview.InitialVector3);
+    }
 }

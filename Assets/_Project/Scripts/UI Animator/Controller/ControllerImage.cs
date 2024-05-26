@@ -27,4 +27,16 @@ public class ControllerImage : Controller{
         newColor.a = myFloat;
         _myImage.color = newColor;
     }
+
+    public override void GetInitialValue(ControllerEditorPreview controller){
+        switch(_animType) {
+            case AnimImageType.FillImage: EditorPreview.InitialFloat = _myImage.fillAmount; break;
+
+            case AnimImageType.FadeImage: EditorPreview.InitialFloat = _myImage.color.a; break;
+        }
+        EditorPreview.initialString = EditorPreview.InitialFloat.ToString();
+    }
+    public override void SetInitialValue(ControllerEditorPreview controller){
+        SetValuesFromCurve(EditorPreview.InitialFloat);
+    }
 }

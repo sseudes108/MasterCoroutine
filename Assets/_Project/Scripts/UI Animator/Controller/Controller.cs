@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class Controller : MonoBehaviour {
@@ -8,7 +10,21 @@ public abstract class Controller : MonoBehaviour {
     [SerializeField] private float _to = 1f;
     [SerializeField] private AnimationCurve _animCurve = new(new Keyframe(0,0), new Keyframe (1,1));
 
+    public ControllerEditorPreview EditorPreview = new();
+
     public abstract void SetValuesFromCurve(float curveResult);
+    public abstract void GetInitialValue(ControllerEditorPreview controller);
+
+    public abstract void SetInitialValue(ControllerEditorPreview controller);
+
+    private void Start(){
+        EditorPreview.preview = false;
+        EditorPreview.PreviewMyValue(this);
+    }
+
+    private void OnValidate() {
+        EditorPreview.PreviewMyValue(this);
+    }
 
     public void Awake(){
         AutoFillDriver();

@@ -129,6 +129,7 @@ public class Driver : MonoBehaviour{
 
     public void UpdateControllers(float result){
         foreach (var controller in _controllers){
+            if(controller == null) break;
             if(controller.gameObject.activeSelf == true){
                 controller.SetValues(result);
             }
