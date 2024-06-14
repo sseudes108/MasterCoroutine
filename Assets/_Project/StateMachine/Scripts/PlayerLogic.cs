@@ -25,7 +25,7 @@ public class PlayerLogic : MonoBehaviour {
                     Star tempStar = starsCopyList[j]; 
                     starsCopyList[j] = starsCopyList[j + 1]; 
                     starsCopyList[j + 1] = tempStar; 
-                }   
+                }
             }
         }
         yield return null;
@@ -54,14 +54,40 @@ public class PlayerLogic : MonoBehaviour {
         return nearestStar;
     }
 
+    private IEnumerator EatGameObject(Transform star, float speed){
+        while (star.localScale.sqrMagnitude > 0.1f){
+            Vector3 oldScale = star.localScale;
+            float step = speed * Time.deltaTime;
+            star.localScale = Vector3.Lerp(oldScale, Vector3.zero, step);
+            yield return null;
+        }
+
+        star.gameObject.SetActive(false);
+        yield return null;
+    }
+
+    private IEnumerator Explode(){
+        ParticleSystem particle = GetComponentInChildren<ParticleSystem>();
+        particle.Play();
+
+        yield return new WaitForSeconds(1f);
+        gameObject.SetActive(false);
+    }
+
     private IEnumerator StarStateMachine(){
         while(AllStarsCopy.Count != 0 ){
             yield return SortStartsByDistance(AllStarsCopy);
             Star nearestStar = FindNearestStar();
 
-            yield return GoToNearestPosition(nearestStar.transform.position, 4);
-            yield return null;
+            if(nearestStar != null){
+                yield return GoToNearestPosition(nearestStar.transform.position, 4);
+                yield return EatGameObject(nearestStar.transform, 2);
+            }
         }
+        yield return GoToNearestPosition(Random.insideUnitCircle, 3);
+
+        StartCoroutine(EatGameObject(transform, 5));
+        yield return Explode();
         yield return null;
     }
 }
